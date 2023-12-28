@@ -1,0 +1,44 @@
+% this document is the README file for the project
+
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\usetikzlibrary{positioning,shapes,arrows,calc}
+
+\title{Arround CCS and Truth generalisation}
+\author{Grégoire DHIMOÏLA,\\
+        Clément DUMAS,\\
+        Hugo FRUCHET
+}
+\date{2023-2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+make datasets
+remove immediate separations from datasets (e.g. presence of "yes" or "no" in the sequences)
+
+make losses for the probes
+
+make the probes with automatic sizes (based on what we give to it)
+
+try \begin{itemize}
+    \item directly on the model
+    \item on a sparse auto encoder (SAE)
+\end{itemize}
+
+compare to other methods, more supervised, with and without SAE.
+
+get dataset
+get activations, replace sentences with activations and get the new dataset
+
+TODO : try add stuff to the sequeces, like "The following statement is true/false." randomly to see if we get a better "model's opinion" rather than "simulated agent opinion".
