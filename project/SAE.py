@@ -1,5 +1,8 @@
 import torch
 
+"""
+In the end we did not train our own datasets but we used pretrained ones for the sake of computational time.
+"""
 class SAE(torch.nn.Module):
     def __init__(self, input_size, hidden_size, activation=torch.sigmoid):
         """

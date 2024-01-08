@@ -5,10 +5,10 @@ CCS (contrast consistent search) losses.
 """
 
 def L_consistency(p_plus, p_minus):
-    return (p_plus - (1-p_minus))**2
+    return ((p_plus - (1-p_minus))**2).mean()
 
 def L_confidence(p_plus, p_minus):
-    return torch.min(p_plus, p_minus)**2
+    return (torch.minimum(p_plus, p_minus, 1-p_plus, 1-p_minus)**2).mean()
 
 def L_CCS(p_plus, p_minus):
     return L_consistency(p_plus, p_minus) + L_confidence(p_plus, p_minus)

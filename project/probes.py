@@ -6,4 +6,4 @@ class LinearProbe(torch.nn.Module):
         self.linear = torch.nn.Linear(input_size, output_size)
 
     def forward(self, x):
-        return self.linear(x)
+        return torch.sigmoid(self.linear(x))
